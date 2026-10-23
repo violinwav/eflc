@@ -1,0 +1,18 @@
+{
+  "name": "Mixing",
+  "extends": "Default",
+  "contexts": {
+    "fl": {
+      "bindings": [
+        {"input": "LEFT", "on": "repeat", "do": {"fl": "mixerJog", "args": [-1]}, "label": "Previous track"},
+        {"input": "RIGHT", "on": "repeat", "do": {"fl": "mixerJog", "args": [1]}, "label": "Next track"},
+        {"input": "Y", "on": "release", "do": {"fl": "toggle", "args": ["mixer"]}, "label": "Show / hide mixer"}
+      ]
+    },
+    "global": {
+      "bindings": [
+        {"input": "LT+BACK", "on": "release", "do": {"profile": "Default"}, "label": "Back to Default"}
+      ]
+    }
+  }
+}

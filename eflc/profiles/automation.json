@@ -1,0 +1,35 @@
+{
+  "name": "Automation",
+  "timing": {"hold_ms": 450},
+  "modifiers": {
+    "BACK": {"as": "layer"}
+  },
+  "contexts": {
+    "global": {
+      "bindings": [
+        {"input": "A", "on": "press", "do": {"midi": "note", "note": 36, "vel": 110, "ch": 10}, "label": "Pad 1 (note 36)"},
+        {"input": "B", "on": "press", "do": {"midi": "note", "note": 38, "vel": 110, "ch": 10}, "label": "Pad 2 (note 38)"},
+        {"input": "X", "on": "press", "do": {"midi": "note", "note": 42, "vel": 110, "ch": 10}, "label": "Pad 3 (note 42)"},
+        {"input": "Y", "on": "press", "do": {"midi": "note", "note": 46, "vel": 110, "ch": 10}, "label": "Pad 4 (note 46)"},
+        {"input": "UP", "on": "press", "do": {"pad": {"channel": 0, "note": 60, "vel": 100}}, "label": "Channel 1 sound"},
+        {"input": "RIGHT", "on": "press", "do": {"pad": {"channel": 1, "note": 60, "vel": 100}}, "label": "Channel 2 sound"},
+        {"input": "DOWN", "on": "press", "do": {"pad": {"channel": 2, "note": 60, "vel": 100}}, "label": "Channel 3 sound"},
+        {"input": "LEFT", "on": "press", "do": {"pad": {"channel": 3, "note": 60, "vel": 100}}, "label": "Channel 4 sound"},
+        {"input": "LB", "on": "press", "do": {"midi": "cc", "cc": 27, "value": 127, "off": 0}, "label": "Button CC 27"},
+        {"input": "RB", "on": "press", "do": {"midi": "cc", "cc": 28, "value": 127, "off": 0}, "label": "Button CC 28"},
+        {"input": "START", "on": "press", "do": {"fl": "play"}, "label": "Play / pause"},
+        {"input": "BACK", "on": "release", "do": {"hud": "toggle"}, "label": "Hide / show hints"},
+        {"input": "BACK", "on": "hold", "do": {"hud": "all"}, "label": "All shortcuts (hold)"},
+        {"input": "BACK+START", "on": "press", "do": {"profile": "@next"}, "label": "Next profile"},
+        {"input": "BACK+A", "on": "press", "do": {"midi": "cc", "cc": 21, "value": 64, "off": null}, "label": "Centre CC 21"}
+      ],
+      "axes": {
+        "LS": {"do": "midi_cc", "cc_x": 21, "cc_y": 22, "mode": "relative", "rate": 80, "label": "CC 21 / 22 (knobs)"},
+        "RS": {"do": "midi_cc", "cc_x": 23, "cc_y": 24, "mode": "relative", "rate": 80, "label": "CC 23 / 24 (knobs)"},
+        "LT": {"do": "midi_cc", "cc": 25, "label": "CC 25 (trigger)"},
+        "RT": {"do": "midi_cc", "cc": 26, "label": "CC 26 (trigger)"},
+        "TOUCH": {"do": "midi_cc", "cc_x": 29, "cc_y": 30, "label": "CC 29 / 30 (touchpad XY)"}
+      }
+    }
+  }
+}

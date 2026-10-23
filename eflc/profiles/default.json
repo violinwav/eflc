@@ -1,0 +1,258 @@
+{
+  "name": "Default",
+  "timing": {
+    "hold_ms": 400,
+    "double_ms": 250,
+    "repeat_delay_ms": 350,
+    "repeat_rate_ms": 70,
+    "seq_window_ms": 1500
+  },
+  "modifiers": {
+    "LT": {"as": "layer"},
+    "RT": {"as": "layer"},
+    "LB": {"as": "key", "key": "shift"},
+    "RB": {"as": "layer"}
+  },
+  "contexts": {
+    "global": {
+      "bindings": [
+        {"input": "A", "on": "press", "do": {"mouse": "left", "hold": true}, "label": "Click / drag"},
+        {"input": "X", "on": "press", "do": {"mouse": "right", "hold": true}, "label": "Right click"},
+        {"input": "B", "on": "press", "do": {"keys": "esc"}, "label": "Back"},
+        {"input": "START", "on": "press", "do": {"keys": "enter"}, "label": "Enter"},
+        {"input": "UP", "on": "repeat", "do": {"keys": "up"}, "label": "Up"},
+        {"input": "DOWN", "on": "repeat", "do": {"keys": "down"}, "label": "Down"},
+        {"input": "LEFT", "on": "repeat", "do": {"keys": "left"}, "label": "Left"},
+        {"input": "RIGHT", "on": "repeat", "do": {"keys": "right"}, "label": "Right"},
+        {"input": "LS", "on": "press", "do": {"keyboard": true}, "label": "Keyboard"},
+        {"input": "RS", "on": "press", "do": {"menu": "context"}, "label": "Action menu"},
+        {"input": "LT+LS", "on": "press", "do": {"pointer": "toggle"}, "label": "Magnetic / free pointer"},
+        {"input": "RB+Y", "on": "press", "do": {"keys": "ctrl+c"}, "label": "Copy"},
+        {"input": "RB+X", "on": "press", "do": {"keys": "ctrl+x"}, "label": "Cut"},
+        {"input": "RB+A", "on": "press", "do": {"keys": "ctrl+v"}, "label": "Paste"},
+        {"input": "RB+B", "on": "press", "do": {"keys": "ctrl+z"}, "label": "Undo"},
+        {"input": "RB+LEFT", "on": "press", "do": {"keys": "ctrl+y"}, "label": "Redo"},
+        {"input": "RB+UP", "on": "press", "do": {"keys": "ctrl+a"}, "label": "Select all"},
+        {"input": "RB+START", "on": "press", "do": {"keys": "ctrl+s"}, "label": "Save"},
+        {"input": "BACK", "on": "release", "do": {"hud": "toggle"}, "label": "Hide / show hints"},
+        {"input": "BACK", "on": "hold", "do": {"hud": "all"}, "label": "All shortcuts (hold)"},
+        {"input": "LT+BACK", "on": "release", "do": {"profile": "@next"}, "label": "Next profile"},
+        {"input": "RT+BACK", "on": "release", "do": {"calibrate": true}, "label": "Calibrate sticks"}
+      ],
+      "axes": {
+        "LS": {"do": "pointer", "speed": 1600, "label": "Pointer"},
+        "RS": {"do": "scroll", "speed": 14, "label": "Scroll ↕ ↔"}
+      }
+    },
+
+    "popup": {
+      "bindings": [
+        {"input": "UP", "on": "repeat", "do": {"keys": "up"}, "label": "Up"},
+        {"input": "DOWN", "on": "repeat", "do": {"keys": "down"}, "label": "Down"},
+        {"input": "LEFT", "on": "repeat", "do": {"keys": "left"}, "label": "Left"},
+        {"input": "RIGHT", "on": "repeat", "do": {"keys": "right"}, "label": "Right"},
+        {"input": "A", "on": "press", "do": {"keys": "enter"}, "label": "Choose"},
+        {"input": "B", "on": "press", "do": {"keys": "esc"}, "label": "Close menu"}
+      ]
+    },
+
+    "fl": {
+      "bindings": [
+        {"input": "START", "on": "press", "do": {"fl": "play"}, "label": "Play / pause"},
+        {"input": "RT+START", "on": "press", "do": {"fl": "stop"}, "label": "Stop"},
+        {"input": "LT+START", "on": "press", "do": {"fl": "record"}, "label": "Record"},
+        {"input": "B", "on": "press", "do": {"fl": "nav", "args": ["escape"]}, "label": "Escape scope"},
+        {"input": "Y", "on": "release", "do": {"fl": "nav", "args": ["nextWindow"]}, "label": "Next window"},
+        {"input": "Y", "on": "hold", "do": {"wheel": "windows"}, "label": "Window wheel (hold)", "ms": 220},
+        {"input": "UP", "on": "repeat", "do": {"fl": "nav", "args": ["up"]}, "label": "Up"},
+        {"input": "DOWN", "on": "repeat", "do": {"fl": "nav", "args": ["down"]}, "label": "Down"},
+        {"input": "LEFT", "on": "repeat", "do": {"fl": "nav", "args": ["left"]}, "label": "Left"},
+        {"input": "RIGHT", "on": "repeat", "do": {"fl": "nav", "args": ["right"]}, "label": "Right"},
+        {"input": "RT+RB", "on": "press", "do": {"fl": "patternJog", "args": [-1]}, "label": "Previous pattern"},
+        {"input": "RB", "on": "release", "do": {"fl": "patternJog", "args": [1]}, "label": "Next pattern"},
+
+        {"input": "LT+Y", "on": "press", "do": {"fl": "show", "args": ["playlist"]}, "label": "Playlist"},
+        {"input": "LT+X", "on": "press", "do": {"fl": "show", "args": ["channelrack"]}, "label": "Channel rack"},
+        {"input": "LT+A", "on": "press", "do": {"fl": "show", "args": ["pianoroll"]}, "label": "Piano roll"},
+        {"input": "LT+B", "on": "press", "do": {"fl": "show", "args": ["mixer"]}, "label": "Mixer"},
+        {"input": "LT+UP", "on": "press", "do": {"fl": "show", "args": ["browser"]}, "label": "Browser"},
+        {"input": "LT+DOWN", "on": "press", "do": {"pointer": "menu"}, "label": "Window menu"},
+        {"input": "LT+LEFT", "on": "press", "do": {"pointer": "mainmenu"}, "label": "Main menu"},
+        {"input": "LT+RS", "on": "press", "do": {"menu": "@scale"}, "label": "Scale lock"},
+
+        {"input": "RB+B", "on": "press", "do": {"fl": "undo"}, "label": "Undo"},
+        {"input": "RB+LEFT", "on": "repeat", "do": {"fl": "redo"}, "label": "Redo"},
+        {"input": "RB+DOWN", "on": "press", "do": {"keys": "ctrl+d"}, "label": "Deselect"},
+        {"input": "RB+RIGHT", "on": "press", "do": {"keys": "ctrl+b"}, "label": "Duplicate"},
+        {"input": "RT+LEFT", "on": "repeat", "do": {"fl": "hzoom", "args": [-1]}, "label": "Zoom out"},
+        {"input": "RT+RIGHT", "on": "repeat", "do": {"fl": "hzoom", "args": [1]}, "label": "Zoom in"},
+        {"input": "RT+UP", "on": "repeat", "do": {"fl": "vzoom", "args": [1]}, "label": "Taller rows"},
+        {"input": "RT+DOWN", "on": "repeat", "do": {"fl": "vzoom", "args": [-1]}, "label": "Shorter rows"}
+      ],
+      "axes": {
+        "RT+RS": {"do": "fl_jog", "op": "hzoom", "axis": "x", "rate": 8, "label": "Zoom"},
+        "LT+RT+LS": {"do": "pinch", "rate": 10, "label": "Smart zoom: pinch both sticks"}
+      },
+      "sequences": [
+        {"seq": ["UP", "UP", "DOWN", "DOWN"], "mods": ["LT", "RT"], "do": {"fl": "transport", "args": ["Save"]}, "label": "Save project"}
+      ],
+      "menu": [
+        {"label": "Magnetic / free pointer", "do": {"pointer": "toggle"}, "detail": "LT + L3"},
+        {"label": "Scale lock…", "do": {"menu": "@scale"}, "detail": "LT + R3"},
+        {"label": "On-screen keyboard", "do": {"keyboard": true}, "detail": "L3"},
+        {"label": "Window menu", "do": {"pointer": "menu"}, "detail": "LT + ↓"},
+        {"label": "Main menu", "do": {"pointer": "mainmenu"}, "detail": "LT + ←"},
+        {"label": "Save project", "do": {"fl": "transport", "args": ["Save"]}},
+        {"label": "Metronome", "do": {"fl": "transport", "args": ["Metronome"]}},
+        {"label": "Tap tempo", "do": {"fl": "transport", "args": ["TapTempo"]}},
+        {"label": "Snap on / off", "do": {"fl": "snapToggle"}}
+      ]
+    },
+
+    "playlist": {
+      "bindings": [
+        {"input": "A", "on": "press", "do": {"mouse": "left", "hold": true}, "label": "Place / drag clip"},
+        {"input": "X", "on": "press", "do": {"mouse": "right", "hold": true}, "label": "Delete clip"},
+        {"input": "UP", "on": "repeat", "do": {"pointer": "step", "dy": 1}, "label": "Step up"},
+        {"input": "DOWN", "on": "repeat", "do": {"pointer": "step", "dy": -1}, "label": "Step down"},
+        {"input": "LEFT", "on": "repeat", "do": {"pointer": "step", "dx": -1}, "label": "Step left"},
+        {"input": "RIGHT", "on": "repeat", "do": {"pointer": "step", "dx": 1}, "label": "Step right"},
+        {"input": "LS", "on": "press", "do": {"tool": "slice"}, "label": "Slice at pointer"},
+        {"input": "RT+A", "on": "press", "do": {"tool_mode": "draw"}, "label": "Draw tool"},
+        {"input": "RT+Y", "on": "press", "do": {"tool_mode": "paint"}, "label": "Paint tool"},
+        {"input": "RT+B", "on": "press", "do": {"tool_mode": "delete"}, "label": "Delete tool"},
+        {"input": "RT+X", "on": "press", "do": {"tool_mode": "mute"}, "label": "Mute tool"},
+        {"input": "RT+UP", "on": "press", "do": {"tool_mode": "slice"}, "label": "Slice tool"},
+        {"input": "RT+DOWN", "on": "press", "do": {"tool_mode": "select"}, "label": "Select tool"},
+        {"input": "RT+LEFT", "on": "repeat", "do": {"tool_mode": "prev"}, "label": "Previous tool"},
+        {"input": "RT+RIGHT", "on": "repeat", "do": {"tool_mode": "next"}, "label": "Next tool"}
+      ],
+      "menu": [
+        {"label": "Tools", "items": [
+          {"label": "Draw", "do": {"tool_mode": "draw"}, "detail": "RT + A"},
+          {"label": "Paint", "do": {"tool_mode": "paint"}, "detail": "RT + Y"},
+          {"label": "Delete", "do": {"tool_mode": "delete"}, "detail": "RT + B"},
+          {"label": "Mute", "do": {"tool_mode": "mute"}, "detail": "RT + X"},
+          {"label": "Slip", "do": {"tool_mode": "slip"}},
+          {"label": "Slice", "do": {"tool_mode": "slice"}, "detail": "RT + ↑"},
+          {"label": "Select", "do": {"tool_mode": "select"}, "detail": "RT + ↓"},
+          {"label": "Zoom", "do": {"tool_mode": "zoom"}}
+        ]},
+        {"label": "Slice at pointer", "do": {"tool": "slice"}, "detail": "L3"},
+        {"label": "Mute at pointer", "do": {"tool": "mute"}},
+        {"label": "Select at pointer", "do": {"tool": "select"}},
+        {"label": "Undo", "do": {"fl": "undo"}, "detail": "RB + B"},
+        {"label": "Redo", "do": {"fl": "redo"}, "detail": "RB + \u2190"},
+        {"label": "Copy", "do": {"keys": "ctrl+c"}, "detail": "RB + Y"},
+        {"label": "Paste", "do": {"keys": "ctrl+v"}, "detail": "RB + A"},
+        {"label": "Select all", "do": {"keys": "ctrl+a"}},
+        {"label": "Duplicate selection", "do": {"keys": "ctrl+b"}},
+        {"label": "Delete selection", "do": {"keys": "delete"}}
+      ]
+    },
+
+    "pianoroll": {
+      "bindings": [
+        {"input": "A", "on": "press", "do": {"mouse": "left", "hold": true}, "label": "Paint / drag note"},
+        {"input": "X", "on": "press", "do": {"mouse": "right", "hold": true}, "label": "Delete note"},
+        {"input": "UP", "on": "repeat", "do": {"pointer": "step", "dy": 1}, "label": "Step up"},
+        {"input": "DOWN", "on": "repeat", "do": {"pointer": "step", "dy": -1}, "label": "Step down"},
+        {"input": "LEFT", "on": "repeat", "do": {"pointer": "step", "dx": -1}, "label": "Step left"},
+        {"input": "RIGHT", "on": "repeat", "do": {"pointer": "step", "dx": 1}, "label": "Step right"},
+        {"input": "LS", "on": "press", "do": {"tool": "slice"}, "label": "Slice at pointer"},
+        {"input": "RT+A", "on": "press", "do": {"tool_mode": "draw"}, "label": "Draw tool"},
+        {"input": "RT+Y", "on": "press", "do": {"tool_mode": "paint"}, "label": "Paint tool"},
+        {"input": "RT+B", "on": "press", "do": {"tool_mode": "delete"}, "label": "Delete tool"},
+        {"input": "RT+X", "on": "press", "do": {"tool_mode": "mute"}, "label": "Mute tool"},
+        {"input": "RT+UP", "on": "press", "do": {"tool_mode": "slice"}, "label": "Slice tool"},
+        {"input": "RT+DOWN", "on": "press", "do": {"tool_mode": "select"}, "label": "Select tool"},
+        {"input": "RT+LEFT", "on": "repeat", "do": {"tool_mode": "prev"}, "label": "Previous tool"},
+        {"input": "RT+RIGHT", "on": "repeat", "do": {"tool_mode": "next"}, "label": "Next tool"}
+      ],
+      "menu": [
+        {"label": "Scale lock…", "do": {"menu": "@scale"}, "detail": "LT + R3"},
+        {"label": "Tools", "items": [
+          {"label": "Draw", "do": {"tool_mode": "draw"}, "detail": "RT + A"},
+          {"label": "Paint", "do": {"tool_mode": "paint"}, "detail": "RT + Y"},
+          {"label": "Delete", "do": {"tool_mode": "delete"}, "detail": "RT + B"},
+          {"label": "Mute", "do": {"tool_mode": "mute"}, "detail": "RT + X"},
+          {"label": "Slice", "do": {"tool_mode": "slice"}, "detail": "RT + ↑"},
+          {"label": "Select", "do": {"tool_mode": "select"}, "detail": "RT + ↓"},
+          {"label": "Zoom", "do": {"tool_mode": "zoom"}},
+          {"label": "Playback", "do": {"keys": "y"}}
+        ]},
+        {"label": "Undo", "do": {"fl": "undo"}, "detail": "RB + B"},
+        {"label": "Redo", "do": {"fl": "redo"}, "detail": "RB + \u2190"},
+        {"label": "Copy", "do": {"keys": "ctrl+c"}, "detail": "RB + Y"},
+        {"label": "Paste", "do": {"keys": "ctrl+v"}, "detail": "RB + A"},
+        {"label": "Edit", "items": [
+          {"label": "Quick quantize", "do": {"keys": "ctrl+q"}},
+          {"label": "Quantize…", "do": {"keys": "alt+q"}},
+          {"label": "Quick legato", "do": {"keys": "ctrl+l"}},
+          {"label": "Chop…", "do": {"keys": "alt+u"}},
+          {"label": "Strum…", "do": {"keys": "alt+s"}},
+          {"label": "Arpeggiate…", "do": {"keys": "alt+a"}},
+          {"label": "Randomize…", "do": {"keys": "alt+r"}},
+          {"label": "Flip…", "do": {"keys": "alt+y"}},
+          {"label": "Limit…", "do": {"keys": "alt+k"}}
+        ]},
+        {"label": "Slice at pointer", "do": {"tool": "slice"}, "detail": "L3"},
+        {"label": "Mute at pointer", "do": {"tool": "mute"}},
+        {"label": "Select all", "do": {"keys": "ctrl+a"}},
+        {"label": "Duplicate selection", "do": {"keys": "ctrl+b"}},
+        {"label": "Octave up", "do": {"keys": "ctrl+up"}},
+        {"label": "Octave down", "do": {"keys": "ctrl+down"}},
+        {"label": "Delete selection", "do": {"keys": "delete"}}
+      ]
+    },
+
+    "channelrack": {
+      "bindings": [
+        {"input": "RT+RB", "on": "press", "do": {"fl": "channelJog", "args": [-1]}, "label": "Previous channel"},
+        {"input": "RB", "on": "release", "do": {"fl": "channelJog", "args": [1]}, "label": "Next channel"}
+      ],
+      "menu": [
+        {"label": "Open channel plugin", "do": {"fl": "showEditor", "args": [-1]}},
+        {"label": "Piano roll for channel", "do": {"fl": "show", "args": ["pianoroll"]}},
+        {"label": "Plugin parameters…", "do": {"menu": "@params"}}
+      ]
+    },
+
+    "mixer": {
+      "bindings": [
+        {"input": "RT+RB", "on": "press", "do": {"fl": "mixerJog", "args": [-1]}, "label": "Previous track"},
+        {"input": "RB", "on": "release", "do": {"fl": "mixerJog", "args": [1]}, "label": "Next track"}
+      ],
+      "menu": [
+        {"label": "Effects on this track…", "do": {"menu": "@slots"}}
+      ]
+    },
+
+    "browser": {
+      "bindings": [
+        {"input": "START", "on": "press", "do": {"fl": "nav", "args": ["enter"]}, "label": "Open / load"}
+      ]
+    },
+
+    "plugin": {
+      "bindings": [
+        {"input": "RT+RB", "on": "press", "do": {"fl": "preset", "args": [-1]}, "label": "Previous preset"},
+        {"input": "RB", "on": "release", "do": {"fl": "preset", "args": [1]}, "label": "Next preset"},
+        {"input": "UP", "on": "repeat", "do": {"pointer": "step", "dy": 1}, "label": "Step up"},
+        {"input": "DOWN", "on": "repeat", "do": {"pointer": "step", "dy": -1}, "label": "Step down"},
+        {"input": "LEFT", "on": "repeat", "do": {"pointer": "step", "dx": -1}, "label": "Step left"},
+        {"input": "RIGHT", "on": "repeat", "do": {"pointer": "step", "dx": 1}, "label": "Step right"},
+        {"input": "RT+LS", "on": "press", "do": {"pointer": "teach"}, "label": "Teach hotspot here"}
+      ],
+      "menu": [
+        {"label": "Parameters…", "do": {"menu": "@params"}},
+        {"label": "Presets…", "do": {"menu": "@presets"}},
+        {"label": "Next preset", "do": {"fl": "preset", "args": [1]}, "detail": "RB tap"},
+        {"label": "Previous preset", "do": {"fl": "preset", "args": [-1]}, "detail": "RT + RB"},
+        {"label": "Teach hotspot here", "do": {"pointer": "teach"}, "detail": "RT + L3"},
+        {"label": "Forget hotspot here", "do": {"pointer": "forget"}},
+        {"label": "Hotspots…", "do": {"menu": "@hotspots"}}
+      ]
+    }
+  }
+}
